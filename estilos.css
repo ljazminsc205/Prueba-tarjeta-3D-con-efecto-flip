@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: font-scrap;
+    src: url(../fonts/scrap-it-up/ScrapItUp.ttf);
+}
+
+.wrap {
+    width: 1100px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.tarjeta-wrap {
+    /*background: chocolate;*/
+    margin: 10px;
+    -webkit-perspective: 800;
+    perspective: 800;
+}
+
+.tarjeta {
+    width: 250px;
+    height: 300px;
+    background: crimson;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: .7s ease;
+    -webkit-box-shadow: 0px 10px 25px -5px rgb(0, 0, 0, 0.65);
+    -moz-box-shadow: 0px 10px 25px -5px rgb(0, 0, 0, 0.65);
+    box-shadow: 0px 10px 25px -5px rgba(139, 13, 13, 0.9);
+}
+
+.adelante, .atras {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.adelante {
+    width: 100%;
+}
+
+.atras {
+    transform: rotateY(180deg);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(92, 23, 71);
+    font-family: font-scrap;
+    font-size: 430%;
+    font-weight: bolder;
+}
+
+.tarjeta-wrap:hover .tarjeta {
+    transform: rotateY(180deg);
+}
+
+.card1 {
+    background-image: url(imagenes/1.jpg);
+    background-size: cover;
+}
+
+.card2 {
+    background-image: url(imagenes/2.jpg);
+    background-size: cover;
+}
+
+.card3 {
+    background-image: url(imagenes/3.jpg);
+    background-size: cover;
+}
+
+.card4 {
+    background-image: url(imagenes/4.jpg);
+    background-size: cover;
+}
+
+.imagen {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    background-image: url(imagenes/5.jpg);
+    height: 165px;
+}
